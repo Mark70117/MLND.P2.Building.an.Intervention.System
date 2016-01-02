@@ -232,7 +232,7 @@ as there overall education might be improved, but it would likely
 be seen as a mis spending of money since not aligned with the goal
 of increasing graduation rate.  Ultimately, test score data, as
 opposed to pass/fail data, might be better at identifying student
-who with a bit of intervention can more from fail to pass. 
+who with a bit of intervention can move from fail to pass. 
 
 Ultimately, a better understanding of how the model is going
 to be used needs to be developed.  Once developed, a better
