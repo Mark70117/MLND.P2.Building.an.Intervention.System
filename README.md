@@ -1,3 +1,12 @@
+# Udacity Machine Learning Nanodegree Project 2
+
+## required code
+student_intervention.ipynb
+
+## required report
+student_intervention.md
+
+
 # Building a Student Intervention System
 Supervised Learning Project
 
