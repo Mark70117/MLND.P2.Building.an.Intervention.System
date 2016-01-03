@@ -190,7 +190,18 @@ farthest from all the closest points.
 
 ![seperating lines](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/220px-Svm_separating_hyperplanes.png)
 
-![margin](/images/logo.png)
+For instance, in the figure above: 
+ * the green line H3 does NOT seperate the circles by color
+ * the red line H2 and the blue line H1 both seperate the set
+
+The Support Vector Machine not only seeks to seperate the groups,
+but also maximize the distance of the closest element of either
+group.  The technical name for this seperation is margin.  In the
+about it is clear to see the blue line is close to the black ball
+at the top and the white ball at the bottom.  In the figure below
+the margin is also denoted by the the dashed lines.
+
+![margin](https://en.wikibooks.org/wiki/Support_Vector_Machines#/media/File:Svm_max_sep_hyperplane_with_margin.png)
 
 Figures are from [2]
 
@@ -254,4 +265,5 @@ of those tradeoffs a better scorer can be written.
 
 
 [1] (2010 largest school districts in the US) [https://en.wikipedia.org/wiki/List_of_the_largest_school_districts_in_the_United_States_by_enrollment]
+
 [2] (wikibooks Support Vector Machines) [https://en.wikibooks.org/wiki/Support_Vector_Machines]
