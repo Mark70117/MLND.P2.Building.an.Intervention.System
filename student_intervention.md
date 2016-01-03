@@ -48,7 +48,7 @@ The following describes the shape of the dataset.
   * Total number of students: 395
   * Number of students who passed: 265
   * Number of students who failed: 130
-  * Number of features: 31
+  * Number of features: 30
   * Graduation rate of the class: 67.09%
 
 To get a baseline of what how effective our eventual model is over
@@ -117,9 +117,9 @@ metric and turn out to be computationally expensive.
 ```
 | model | Train | Train  | Predict | Train | Test |
 |       | size  | time   | time    | F1    | F1   |
-| DT    |  300  | 0.003  | 0.000   | 1.00  | 0.76 |
-| DT    |  200  | 0.001  | 0.000   | 1.00  | 0.78 |
-| DT    |  100  | 0.001  | 0.000   | 1.00  | 0.69 |
+| DT    |  300  | 0.003  | 0.000   | 1.00  | 0.78 |
+| DT    |  200  | 0.001  | 0.000   | 1.00  | 0.77 |
+| DT    |  100  | 0.001  | 0.000   | 1.00  | 0.66 |
 ```
 Fast runtime. Train time decrease with sample size.
 'Perfect' fit to training. Train results not good
@@ -129,8 +129,8 @@ size.
 ```
 | model | Train | Train  | Predict | Train | Test |
 |       | size  | time   | time    | F1    | F1   |
-| NN    |  300  | 0.002  | 0.008   | 0.86  | 0.78 |
-| NN    |  200  | 0.001  | 0.005   | 0.81  | 0.81 |
+| NN    |  300  | 0.005  | 0.009   | 0.86  | 0.78 |
+| NN    |  200  | 0.001  | 0.004   | 0.81  | 0.81 |
 | NN    |  100  | 0.001  | 0.002   | 0.82  | 0.76 |
 ```
 Slow runtime. Train time decrease with sample size.
@@ -140,8 +140,8 @@ consistent results as sample size decreases.
 ```
 | model | Train | Train  | Predict | Train | Test |
 |       | size  | time   | time    | F1    | F1   |
-| SVM   |  300  | 0.007  | 0.006   | 0.86  | 0.85 |
-| SVM   |  200  | 0.004  | 0.004   | 0.85  | 0.84 |
+| SVM   |  300  | 0.016  | 0.006   | 0.86  | 0.85 |
+| SVM   |  200  | 0.003  | 0.002   | 0.85  | 0.84 |
 | SVM   |  100  | 0.002  | 0.001   | 0.86  | 0.86 |
 ```
 
@@ -156,9 +156,9 @@ time.
 
 I selected to purse the SVM model.  It had the highest F1 score on
 all three training set sizes
-  * 300:  0.85 vs  0.76, 0.78
-  * 200:  0.84 vs  0.78, 0.81
-  * 100:  0.86 vs  0.69, 0.76
+  * 300:  0.85 vs  0.78, 0.78
+  * 200:  0.84 vs  0.77, 0.81
+  * 100:  0.86 vs  0.66, 0.76
 
 In terms of time efficiency both the SVM and NN were comparable, both much
 worse that DT.  The results for the SVM suggest it did not suffer from
@@ -186,7 +186,15 @@ only two.  Each student would be plotted on a graph on a sheet of
 paper.  Then one would look for the line that divided the 'yes'es
 from the 'no's.  The line would be chosen to both divide the two
 groups and to create a boundary on each side of the line that was
-farthest from all the closest points.  The computer is doing a
+farthest from all the closest points.  
+
+![seperating lines](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/220px-Svm_separating_hyperplanes.png)
+
+![margin](/images/logo.png)
+
+Figures are from [2]
+
+The computer is doing a
 similar thing but is capable of working in much higher dimensions
 and capable of adding new dimensions to make the split with the
 N-dimensional equivalent of a line, a hyperplane.
@@ -194,7 +202,7 @@ N-dimensional equivalent of a line, a hyperplane.
 My recommendation to the board of supervisors would be to build a
 SVM model with the currently available data.  The model would be
 used to identify students that are predicted to not pass.  The
-model can do this with 83% (5/6) accuracy.  The model has 20%
+model can do this with 80% (4/5) accuracy.  The model has 16%
 recall, so most students who are going to fail will not be identified.
 Given the limited resources of the group, this isn't necessarily
 a big problem.  The limited resource can be used to intervene with
@@ -246,3 +254,4 @@ of those tradeoffs a better scorer can be written.
 
 
 [1] (2010 largest school districts in the US) [https://en.wikipedia.org/wiki/List_of_the_largest_school_districts_in_the_United_States_by_enrollment]
+[2] (wikibooks Support Vector Machines) [https://en.wikibooks.org/wiki/Support_Vector_Machines]
