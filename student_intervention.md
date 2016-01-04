@@ -201,7 +201,7 @@ about it is clear to see the blue line is close to the black ball
 at the top and the white ball at the bottom.  In the figure below
 the margin is also denoted by the the dashed lines.
 
-![margin](https://en.wikibooks.org/wiki/Support_Vector_Machines#/media/File:Svm_max_sep_hyperplane_with_margin.png)
+![margin](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png)
 
 Figures are from [2]
 
