@@ -181,7 +181,7 @@ on a laptop. Repeat, increasing n, until you are under time budget.
 
 The model works by taking the existing data and attempting to
 divide it into two classes based on the 'passed' label.  As a
-simplification, imagine instead of 31 features, that there were
+simplification, imagine instead of 30 features, that there were
 only two.  Each student would be plotted on a graph on a sheet of
 paper.  Then one would look for the line that divided the 'yes'es
 from the 'no's.  The line would be chosen to both divide the two
