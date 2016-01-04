@@ -199,7 +199,7 @@ but also maximize the distance of the closest element of either
 group.  In the above it is clear to see the blue line is close to
 the black ball at the top and the white ball at the bottom.  The
 red line is a larger distance from the nearest black and white
-balls.
+balls.  The SVM would pick the red line.
 
 The technical name for this separation is margin.  In the
 figure below the margin is also denoted by the the dashed lines.
