@@ -188,39 +188,56 @@ from the 'no's.  The line would be chosen to both divide the two
 groups and to create a boundary on each side of the line that was
 farthest from all the closest points.  
 
-![seperating lines](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/220px-Svm_separating_hyperplanes.png)
+![separating lines](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Svm_separating_hyperplanes.png/220px-Svm_separating_hyperplanes.png)
 
 For instance, in the figure above: 
- * the green line H3 does NOT seperate the circles by color
- * the red line H2 and the blue line H1 both seperate the set
+ * the green line H3 does NOT separate the circles by color
+ * the red line H2 and the blue line H1 both separate the set
 
-The Support Vector Machine not only seeks to seperate the groups,
+The Support Vector Machine not only seeks to separate the groups,
 but also maximize the distance of the closest element of either
-group.  The technical name for this seperation is margin.  In the
-about it is clear to see the blue line is close to the black ball
-at the top and the white ball at the bottom.  In the figure below
-the margin is also denoted by the the dashed lines.
+group.  In the above it is clear to see the blue line is close to
+the black ball at the top and the white ball at the bottom.  The
+red line is a larger distance from the nearest black and white
+balls.
+
+The technical name for this separation is margin.  In the
+figure below the margin is also denoted by the the dashed lines.
+Support vector machines algorithm is margin maximizing.
 
 ![margin](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png)
 
 Figures are from [2]
 
-```
--A-B---x-+-y-z----C-
--5       0        5
+Separating groups with just a line may seem severely limiting.
+However the algorithm is able to create new features out of 
+computations on existing features.  Say for example in the figure
+below, we wish so separate the capital letters (A,B,C) from
+the lower case letters (p,q,r) by picking one point on the number line.
+It is not possible.  Any point we pick will have both lower case
+and capital letters either to the left of to the right.
 
+```
+-A-B---p-+-q-r----C-
+-5       0        5
+```
+
+However, if we create a new feature (another dimension), the distance
+from zero, and re-plot in 2 dimensions, it is clear that we can draw
+a line y=3 to separate the two groups.  For the SVM algorithm this
+is know as 'the kernel trick' and allows the algorithm to map the
+features to new spaces where they can be separated.
+
+```
 -A-------|--------C- 5
 ---B-----|---------- 4
 ---------|---------- 3
----------|---z------ 2
--------x-+-y-------- 1
+---------|---r------ 2
+-------p-+-q-------- 1
+---------+---------- 0
 -5       0        5
 ```
 
-The computer is doing a
-similar thing but is capable of working in much higher dimensions
-and capable of adding new dimensions to make the split with the
-N-dimensional equivalent of a line, a hyperplane.
 
 My recommendation to the board of supervisors would be to build a
 SVM model with the currently available data.  The model would be
