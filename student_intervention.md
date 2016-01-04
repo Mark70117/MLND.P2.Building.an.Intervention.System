@@ -205,6 +205,18 @@ the margin is also denoted by the the dashed lines.
 
 Figures are from [2]
 
+```
+-A-B---x-+-y-z----C-
+-5       0        5
+
+-A-------|--------C- 5
+---B-----|---------- 4
+---------|---------- 3
+---------|---z------ 2
+-------x-+-y-------- 1
+-5       0        5
+```
+
 The computer is doing a
 similar thing but is capable of working in much higher dimensions
 and capable of adding new dimensions to make the split with the
